@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>媒体列表-投放管理平台</title>
+		<link rel="stylesheet" href="lib/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/adtop.css" />
+	</head>
+	<body>
+		<div class="contianer-fluid adtopContainer">
+			<div id="adtopWrap" class="row-fluid">
+				<div id="sideNav" class="span3 sideNav">
+					<dl>
+						<dt>
+							广告系统<strong>logo</strong>
+						</dt>
+						<dd>
+							<a href="/dataquery.html"><i class="sideIcon1"></i>数据查询</a>
+						</dd>
+						<dd>
+							<a href="/medialist.html"><i class="sideIcon2"></i>媒体列表</a>
+						</dd>
+						<dd class="active">
+							<a href="/account.html"><i class="sideIcon3"></i>账号管理</a>
+						</dd>
+					</dl>
+				</div>
+				<div class="span9 adtopContent accountContent">
+					<div class="topNav">
+						<h3>投放管理平台</h3>
+						<dl>
+							<dt>考拉fm科技有限公司</dt>
+							<dd class="forLogin"><a href="/"><img src="img/iconLogin.png" alt="" />登录</a></dd>
+							<dd class="forQuit"><img src="img/icon-quit.png" alt="" />退出</dd>
+						</dl>
+					</div>
+					<div class="account">
+						<div class="hero-unit">
+						  <h3>基本信息</h3>
+						  <p>名称：<span>xxxxx有限公司</span></p>
+						  <p>会员类型：<span>方案商/厂商/运营商/语音服务商</span></p>
+						  <p>工商注册登记号：<span>企业合法标识（后期是否用于验证）</span></p>
+						</div>
+						<div class="accountEdit">
+							<h5><span>以下内容可修改</span></h5>
+							<div class="row-fluid">
+								<div class="span1">联系地址:</div>
+								<div class="span11">
+									<select name="" id="province">
+										<option value="">选择省</option>
+										<option value="">11</option>
+										<option value="">11</option>
+									</select>
+									<select name="" id="city">
+										<option value="">选择市</option>
+									</select>
+									<input type="text" placeholder="具体地址"/>
+								</div>
+							</div>
+							<div class="row-fluid">
+								<div class="span1">联系人:</div>
+								<div class="span11"><input type="text" /></div>
+							</div>
+							<div class="row-fluid">
+								<div class="span1">手机号码:</div>
+								<div class="span11"><input type="text" /></div>
+							</div>
+							<div class="row-fluid">
+								<div class="span1">电子邮箱:</div>
+								<div class="span11"><input type="text" /></div>
+							</div>
+							<span class="iBtn iBtn2">修改保存</span>
+							<span class="iBtn">返回</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<!--js-->
+		<script src="lib/js/jquery-1.8.3.min.js"></script>
+		<script src="lib/js/bootstrap.min.js"></script>
+		<script src="js/adtop.js"></script>
+	</body>
+</html>

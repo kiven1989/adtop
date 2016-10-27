@@ -1,0 +1,485 @@
+::-webkit-scrollbar{
+    width: 8px; 
+    height: 8px;
+    }/*滚动条大小*/
+::-webkit-scrollbar-thumb{
+    background-clip: padding-box;
+    background-color: #ccc; 
+    min-height: 28px; 
+    border-radius:6px;
+    }/*滚动条默认显示样式*/
+::-webkit-scrollbar-thumb:hover{
+    background-color:#5f9af3;
+    }/*鼠标移动到滚动条显示样式*/
+::-webkit-scrollbar-thumb:active{background-color:#5f9af3;
+}/*鼠标点击滚动条显示样式*/
+::-webkit-scrollbar-track:vertical,::-webkit-scrollbar-track:horizontal{
+    background-color: transparent;
+    }/*滚动条滚动轨迹横向纵向背景*/
+::-webkit-scrollbar-track:vertical,::-webkit-scrollbar-track:horizontal,::-webkit-scrollbar-thumb:vertical,::-webkit-scrollbar-thumb:horizontal{
+    border-width: 0; 
+    border-style: solid; 
+    border-color:transparent;
+}/*去除滚动条及其滚动轨迹的边框,小觉个人认为这儿应该可以简化成border: 0 solid transparent*/
+@mixin clearfix {
+  zoom: 1;
+  &:after {
+    content: "\20";
+    display: block;
+    clear: both;
+  }
+}
+li{
+    list-style: none;
+}
+.logonBody{
+    background:url(../img/loginBg.jpg) no-repeat center top;
+    background-size:cover;
+}
+.adtopContainer{
+    width:1366px;
+    margin:0 auto;
+}
+//ssp弹框
+.adtopBox{
+    width:312px;
+    padding:33px 30px;
+    margin-left:-187px;
+    h3{
+        font-size:20px;
+        color:#333;
+        text-align: center;
+    }
+    .modal-header,.modal-body,.modal-footer{
+        background:#fff;
+        padding:0;
+        border:0; 
+    }
+    .modal-body{
+        padding:24px 0;
+    }
+    .btn1{
+        color:#fff;
+        background:#5f9af3;
+        text-align: center;
+        font-size:16px;
+        cursor: pointer;
+        border-radius:4px;
+        &:hover{
+            background:#448bf7;   
+        }
+        &:active{
+            background:#0062f7;
+        }
+    } 
+}
+.loginBox{
+    .loginBtn{
+        display: block;
+        height:38px;
+        line-height: 38px; 
+    }
+    .iptWrap{
+        position:relative;
+        margin-bottom:10px;
+        border:1px solid #dfdfdf;
+        height:36px;
+        padding-left:30px;
+        border-radius: 4px;
+        &:hover{
+            border-color:#b3d1ff;
+        }
+        input{
+            display: block;
+            width:100%;
+            width:266px \9;
+            border:0;
+            box-shadow:none;
+            height:36px;
+            height:26px \9;
+            line-height:26px \9;;
+            margin:0;
+            padding:0;
+        }
+        i{
+            position:absolute;
+            z-index:1;
+            left:10px;
+            top:50%;
+            margin-top:-7px;
+            background-repeat: no-repeat;
+            &.icon-login{
+                width:13px;
+                height:13px;
+                background:url(../img/icon-login.png);
+            }
+            &.icon-password{
+                width:12px;
+                height:15px;
+                background:url(../img/icon-password.png);
+            }
+        }
+    }
+    .help{
+        label{
+            float:left;
+        }
+        a{
+            float:right;
+        }
+    }
+    
+}
+.sideNav{
+    background:#2f323a;
+    dl{
+        margin:0;
+    }
+    dt{
+        background:#1b2224;
+        color:#fff;
+        text-align: center;
+         padding:28px 0;
+        strong{
+            font-size:20px;
+            margin-left:10px;
+        }
+    }
+    dd{
+        cursor: pointer;
+        font-size:20px;
+        
+        text-align:center;
+        margin:0;
+        &:hover{
+            background:#3e4350;
+        }
+        &.active{
+            background:#5f9af3;
+            .sideIcon1{
+                background-image:url(../img/sideIcon1-1.png);
+            }
+            .sideIcon2{
+                background-image:url(../img/sideIcon2-1.png);
+            }
+            .sideIcon3{
+                background-image:url(../img/sideIcon3-1.png);
+            }
+            .sideIcon4{
+                background-image:url(../img/sideIcon4-1.png);
+            }
+            .sideIcon5{
+                background-image:url(../img/sideIcon5-1.png);
+            }
+            a{
+              color:#fff;  
+            }         
+        }
+        a{
+            display: block;
+            color:#828488;
+            padding:28px 0;
+            &:hover,&:focus{
+                text-decoration: none;
+            }
+        }
+    }
+    i{
+      display: inline-block;
+      width:28px;
+      height:28px;
+      vertical-align: sub;
+      background-repeat: no-repeat;
+      background-size:contain;
+      background-position: center center;
+      margin-right:10px;
+      &.sideIcon1{
+        background-image:url(../img/sideIcon1.png);   
+      }
+      &.sideIcon2{
+        background-image:url(../img/sideIcon2.png);   
+      }
+      &.sideIcon3{
+        background-image:url(../img/sideIcon3.png);   
+      }
+      &.sideIcon4{
+        background-image:url(../img/sideIcon4.png);   
+      }
+      &.sideIcon5{
+        background-image:url(../img/sideIcon5.png);   
+      }
+      
+        
+    }
+}
+.adtopContent{
+    margin-left:0 !important;
+    width:76.59574468085106% !important;
+}
+.topNav{
+    padding:30px 30px 20px;
+    color:#555;
+    font-size:16px;
+    border-bottom:1px solid #ccc;
+    margin:0 20px;
+    @include clearfix;
+    h3{
+        float:left;
+        font-size:22px;
+        color:#5f9af3;
+        margin:0;
+    }
+    dl{
+        float:right;
+        margin:0;
+        padding-top:12px;
+    }
+    dt{
+        float:left;
+        font-weight:normal;
+        border-right:1px solid #ccc;
+        padding-right:20px;
+        margin-right:20px;
+    }
+    dd{
+        float:right;
+        cursor: pointer;
+        &.forLogin{
+            margin-top:-4px;
+            img{
+                width:26px;       
+            }
+        }
+        img{
+            vertical-align: sub;
+            margin-right:10px;
+        }
+        a{
+         color:#999;
+         &:hover,&:active{
+             color:#999;
+             text-decoration: none;
+         } 
+        }
+    }
+}
+.mediaList{
+    padding:20px;
+    h4{
+        margin-bottom:20px;
+    }
+    .table-bordered{
+        border-radius:0;
+    }
+    th,td{
+        text-align: center;
+        padding:14px 0;
+    }
+    th{
+        background-color:#eee;
+    }
+}
+.ps{
+  color:#999;
+  line-height: 160%;
+ dd{
+     margin:0;
+ }   
+}
+.pagination{
+    margin-top:40px;
+    text-align: center;
+    a{
+        display: inline-block;
+        vertical-align: middle;
+        &:hover,&:active{
+            text-decoration: none;
+        }
+    }
+    span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    input{
+        vertical-align: middle;
+        margin:0;
+    }
+    .pageNum{
+        width:24px;
+        height:24px;
+        line-height: 24px;
+        border:1px solid #E5E5E5;
+        text-align: center;
+        color:#333;
+        margin:0 4px;
+        &:hover,&.active{
+            color:#fff;
+            background-color:#5f9af3;
+            border-color:#5f9af3;
+        }
+    }
+    .prev,.next{
+        width:80px;
+        background:#eee;
+    }
+    .forbid{
+        color:#ccc;
+        &:hover{
+            color:#ccc;
+            background:#eee;   
+        }
+    }
+    .total{
+        margin:0 10px;
+    }
+    input{
+        width:48px;
+        text-align: center;
+    }
+    .pagiConfirm{
+        width:60px;
+        height:30px;
+        line-height:30px;
+        color:#fff;
+        background:#5f9af3;
+        margin-left:40px;
+    }
+}
+.accountContent{
+    .topNav{
+        border-bottom:0;
+    }
+}
+.account{
+    .hero-unit{
+        border-radius:0;
+        background:#f2f5f9;
+    }
+}
+.accountEdit{
+    padding:0 50px;
+    h5{
+        border-bottom:1px dashed #ccc;
+        text-align: center;
+        color:#999;
+        font-weight: normal;
+        line-height: 1px;
+        margin-bottom:50px;
+        span{
+            background:#fff;
+            padding:0 16px;
+        }
+    }
+    .iBtn{
+        display: inline-block;
+        width:114px;
+        height:36px;
+        line-height: 36px;
+        text-align: center;
+        border:1px solid #999;
+        margin:20px 40px 20px 0;
+        color:#666;
+        cursor:pointer;
+        border-radius:4px;
+    }
+    .iBtn2{
+        background:#5f9af3;
+        color:#fff;
+        border-color:#5f9af3;
+    }
+}
+.mode{
+    padding:0 30px; 
+    margin-bottom:20px;
+}
+.modeOne{
+    ul{
+        @include clearfix;
+        margin:0 0 40px 0;
+    }
+    li{
+        float:left;
+        width:25%;
+        *width:24%;
+        height:274px;
+        color:#fff;
+        text-align: center;
+        &.color1{
+            background:#01828f;
+        }
+        &.color2{
+            background:#26a59a;
+        }
+        &.color3{
+            background:#1565c2;
+        }
+        &.color4{
+            background:#02569d;
+        }
+        strong{
+            display: block;
+            font-size:40px;
+            font-weight: normal;
+            padding:110px 0 20px;
+        }
+        span{
+            float:left;
+            padding:10px;
+        }
+        i{
+            float:right;
+            margin:10px;
+            width:0;
+            height:0;
+            border-top: 20px solid #d8d8d8;
+            border-left: 20px solid transparent; 
+        }
+    }
+}
+.queryZone{
+    p{
+        text-align: right;
+        color:#999;
+        padding-right:60px;
+    }
+    select{
+        vertical-align: sub;
+        margin-right:10px;
+    }
+    input{
+        vertical-align: sub;
+    }
+    .iBtn{
+        display: inline-block;
+        width:120px;
+        height:30px;
+        line-height: 30px;
+        color:#fff;
+        background:#26a59a;
+        text-align: center;
+        border-radius:4px;
+        vertical-align: sub;
+        margin-left:10px;
+        cursor: pointer;
+    }
+}
+.mode3{
+    th{
+        background:#eee;
+    }
+    th,td{
+        text-align: center;   
+        padding:20px 0; 
+    }
+    .ps{
+        font-size:12px;   
+    }
+}
+.forQuit{
+    display: none;
+}
+.dataTalk{
+    height:400px;
+    border:1px solid #eee;
+    padding:40px 20px;
+}

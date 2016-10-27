@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>媒体列表-投放管理平台</title>
+		<link rel="stylesheet" href="lib/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/adtop.css" />
+	</head>
+	<body>
+		<div class="contianer-fluid adtopContainer">
+			<div id="adtopWrap" class="row-fluid">
+				<div id="sideNav" class="span3 sideNav">
+					<dl>
+						<dt>
+							广告系统<strong>logo</strong>
+						</dt>
+						<dd class="active">
+							<a href="/dataquery.html"><i class="sideIcon1"></i>数据查询</a>
+						</dd>
+						<dd>
+							<a href="/medialist.html"><i class="sideIcon2"></i>媒体列表</a>
+						</dd>
+						<dd>
+							<a href="/account.html"><i class="sideIcon3"></i>账号管理</a>
+						</dd>
+					</dl>
+				</div>
+				<div class="span9 adtopContent accountContent">
+					<div class="topNav">
+						<h3>投放管理平台</h3>
+						<dl>
+							<dt>考拉fm科技有限公司</dt>
+							<dd class="forLogin"><a href="/"><img src="img/iconLogin.png" alt="" />登录</a></dd>
+							<dd class="forQuit"><img src="img/icon-quit.png" alt="" />退出</dd>
+						</dl>
+					</div>
+					<div class="dataquery">
+						<div class="mode modeOne">
+							<ul>
+								<li class="color1">
+									<span>次</span>
+									<i class="triangle"></i>
+									<strong>52424132</strong>
+									<p>昨日预估展示数</p>
+								</li>
+								<li  class="color2">
+									<span>次</span>
+									<i class="triangle"></i>
+									<strong>52424132</strong>
+									<p>近7日展示数</p>
+								</li>
+								<li  class="color3">
+									<span>千次</span>
+									<i class="triangle"></i>
+									<strong>52424132</strong>
+									<p>本月累计展示数</p>
+								</li>
+								<li  class="color4">
+									<span>千次</span>
+									<i class="triangle"></i>
+									<strong>52424132</strong>
+									<p>账号总展示数</p>
+								</li>
+							</ul>
+							<div class="queryZone">
+								媒体：
+								<select name="" id="">
+									<option value="">全都</option>
+									<option value="">11</option>
+									<option value="">11</option>
+								</select>
+								渠道等级：
+								<select name="" id="">
+									<option value="">一级</option>
+									<option value="">二级</option>
+									<option value="">三级</option>
+								</select>
+								<input type="text" />
+								<span class="iBtn">查询</span>
+								<p>（注：默认选项都是全部，时间选项为昨天）</p>
+							</div>
+						</div>
+						<div id="dataTalk" class="mode dataTalk">
+							
+						</div>
+						<div class="mode mode3">
+							<h4>广告列表</h4>
+							<table class="table table-bordered table-hover">
+								<tr>
+									<th width="50%">广告名称</th>
+									<th width="50%">交易摘要</th>
+								</tr>
+								<tr>
+									<td>111</td>
+									<td>111</td>
+								</tr>
+								<tr>
+									<td>222</td>
+									<td>222</td>
+								</tr>
+								<tr>
+									<td>333</td>
+									<td>444</td>
+								</tr>
+							</table>
+							<dl class="ps">
+								<dt>注:</dt>
+								<dd>1.媒体为厂商创建的一个广告展示媒介。硬件厂商会跟硬件相关，软件厂商会跟系统或app相关，媒体由商务管理人员进行管理。</dd>
+								<dd>2.渠道等级为全部时，是和当前用户相关的所有数据，渠道为一级时，是当前用户作为一级渠道的所有流量，为二级时是当前用户作为二级渠道的所有流量和广告。</dd>
+								<dd>3.广告列表页随上面的查询联动，媒体=某一项时，则显示投放在此媒体的广告，其他同理。</dd>
+							</dl>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<!--js-->
+		<script src="lib/js/jquery-1.8.3.min.js"></script>
+		<script src="lib/js/bootstrap.min.js"></script>
+		<script src="lib/js/echarts.common.min.js"></script>
+		<script src="js/adtop.js"></script>
+	</body>
+</html>
