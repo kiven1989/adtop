@@ -4,6 +4,7 @@
 		<meta charset="UTF-8"/>
 		<title>媒体列表-投放管理平台</title>
 		<link rel="stylesheet" href="lib/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="lib/css/jquery.datepicker.css" />
 		<link rel="stylesheet" href="css/adtop.css" />
 	</head>
 	<body>
@@ -15,13 +16,13 @@
 							广告系统<strong>logo</strong>
 						</dt>
 						<dd class="active">
-							<a href="/dataquery.html"><i class="sideIcon1"></i>数据查询</a>
+							<a href="./dataquery.html"><i class="sideIcon1"></i>数据查询</a>
 						</dd>
 						<dd>
-							<a href="/medialist.html"><i class="sideIcon2"></i>媒体列表</a>
+							<a href="./medialist.html"><i class="sideIcon2"></i>媒体列表</a>
 						</dd>
 						<dd>
-							<a href="/account.html"><i class="sideIcon3"></i>账号管理</a>
+							<a href="./account.html"><i class="sideIcon3"></i>账号管理</a>
 						</dd>
 					</dl>
 				</div>
@@ -62,7 +63,7 @@
 									<p>账号总展示数</p>
 								</li>
 							</ul>
-							<div class="queryZone">
+							<div id="queryZone" class="queryZone">
 								媒体：
 								<select name="" id="">
 									<option value="">全都</option>
@@ -75,8 +76,16 @@
 									<option value="">二级</option>
 									<option value="">三级</option>
 								</select>
-								<input type="text" />
-								<span class="iBtn">查询</span>
+								查询日期：
+								<select name="" id="choiceQueryType">
+									<option value="">选择查询日期</option>
+									<option value="7">7天前</option>
+									<option value="30">30天前</option>
+									<option value="auto">自选</option>
+								</select>
+								<input id="dateIpt1" class="dateIpt" type="text" placeholder="查询起始日期"/>--
+								<input id="dateIpt2" class="dateIpt" type="text" placeholder="查询终止日期"/>
+								<span class="iBtn queryBtn">查询</span>
 								<p>（注：默认选项都是全部，时间选项为昨天）</p>
 							</div>
 						</div>
@@ -119,6 +128,8 @@
 		</div>
 		<!--js-->
 		<script src="lib/js/jquery-1.8.3.min.js"></script>
+		<script src="lib/js/jquery-ui-1.11.4.min.js"></script>
+		
 		<script src="lib/js/bootstrap.min.js"></script>
 		<script src="lib/js/echarts.common.min.js"></script>
 		<script src="js/adtop.js"></script>

@@ -58,7 +58,12 @@
 		sideNav : $('#sideNav'),
 		province : $('#province'),
 		city : $('#city'),
-		dataTalk : $('#dataTalk')
+		dataTalk : $('#dataTalk'),
+		choiceQueryType : $('#choiceQueryType'),
+		dateIpt : $('.dateIpt'),
+		queryZone : $('#queryZone'),
+		dateIpt1 : $('#dateIpt1'),
+		dateIpt2 : $('#dateIpt2')
 	}
 	
 	//5.功能函数
@@ -78,6 +83,9 @@
 			
 			//初始化图表
 			handler.initDataTalk();
+			
+			//初始化日期控件
+			handler.initDate();
 			
 		},
 		loginShow : function(){
@@ -175,6 +183,71 @@
 			
 			//设置图表实例的配置项以及数据
 			myEchart.setOption(option);
+		},
+		choiceQueryType : function(){
+			var val = this.value;
+			if( val == '' || val == 7 || val == 30){
+				$obj.dateIpt.hide().val('');
+			}else{
+				$obj.dateIpt.slideDown();
+			}
+			
+			//赋值给select元素
+			$(this).data('date',val);
+		},
+		formDate : function(date){
+			console.log(date)
+		},
+		queryBtnClick : function(){
+			if($obj.choiceQueryType.data('date') && $obj.choiceQueryType.data('date') != 'auto'){
+				alert('选择的日期--'+$obj.choiceQueryType.data('date'))
+				
+				handler.formDate($obj.choiceQueryType.data('date'));
+				
+				
+				
+			}else{
+				alert('请选择日期')	
+			}
+		},
+		initDate : function(){
+			var data1 = null;
+			var data2 = null;
+			$obj.dateIpt1.datepicker({
+				dateFormat:"yy-mm-dd",
+			  	maxDate : -1,
+			  	onSelect : function(d){
+			  		data1 = d;
+			  		if(data2){
+			  			if( new Date(data2) - new Date(data1) < 0){
+			  				alert('结束时间不能小于开始时间')
+			  				$obj.dateIpt1.val('')
+			  				$obj.choiceQueryType.data('date','auto')
+			  			}else{
+			  				handler.setDate(data1,data2)
+			  			}
+			  		}
+			  	}
+			});
+			$obj.dateIpt2.datepicker({
+				dateFormat:'yy-mm-dd',
+			  	maxDate : 0,
+			  	onSelect : function(d){
+			  		data2 = d;
+			  		if(data1){
+			  			if( new Date(data2) - new Date(data1) < 0){
+			  				alert('结束时间不能小于开始时间')
+			  				$obj.dateIpt2.val('')
+			  				$obj.choiceQueryType.data('date','auto')
+			  			}else{
+			  				handler.setDate(data1,data2)
+			  			}
+			  		}
+			  	}
+			});
+		},
+		setDate : function(d1,d2){
+			$obj.choiceQueryType.data('date',d1+','+d2)
 		}
 	}
 	
@@ -213,6 +286,12 @@
 			
 			//监听省下拉框选择变化
 			$obj.province.on('change',handler.provinceChange);
+			
+			//选择查询类型
+			$obj.choiceQueryType.on('change',handler.choiceQueryType);
+			
+			//查询事件
+			$obj.queryZone.on('click','.queryBtn',handler.queryBtnClick);
 		}
 	}
 	
