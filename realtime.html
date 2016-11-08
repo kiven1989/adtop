@@ -15,7 +15,7 @@
 						<dt>
 							广告系统<strong>logo</strong>
 						</dt>
-						<dd class="active">
+						<dd>
 							<a href="./dataquery.html"><i class="sideIcon1"></i>数据查询</a>
 						</dd>
 						<dd>
@@ -24,12 +24,12 @@
 						<dd>
 							<a href="./account.html"><i class="sideIcon3"></i>账号管理</a>
 						</dd>
-						<dd>
+						<dd class="active">
 							<a href="./realtime.html"><i class="sideIcon4"></i>实时数据</a>
 						</dd>
 					</dl>
 				</div>
-				<div class="span9 adtopContent accountContent">
+				<div class="span9 adtopContent">
 					<div class="topNav">
 						<h3>投放管理平台</h3>
 						<dl>
@@ -38,65 +38,28 @@
 							<dd class="forQuit"><img src="img/icon-quit.png" alt="" />退出</dd>
 						</dl>
 					</div>
-					<div class="dataquery">
-						<div class="mode modeOne">
-							<ul>
-								<li class="color1">
-									<span>次</span>
-									<i class="triangle"></i>
-									<strong>52424132</strong>
-									<p>昨日预估展示数</p>
-								</li>
-								<li  class="color2">
-									<span>次</span>
-									<i class="triangle"></i>
-									<strong>52424132</strong>
-									<p>近7日展示数</p>
-								</li>
-								<li  class="color3">
-									<span>千次</span>
-									<i class="triangle"></i>
-									<strong>52424132</strong>
-									<p>本月累计展示数</p>
-								</li>
-								<li  class="color4">
-									<span>千次</span>
-									<i class="triangle"></i>
-									<strong>52424132</strong>
-									<p>账号总展示数</p>
-								</li>
-							</ul>
-							<div id="queryZone" class="queryZone">
-								媒体：
-								<select name="" id="mediaSelect">
-									<option value="1">全都</option>
-									<option value="2">11</option>
-									<option value="3">11</option>
-								</select>
-								渠道等级：
-								<select name="" id="">
-									<option value="">一级</option>
-									<option value="">二级</option>
-									<option value="">三级</option>
-								</select>
-								查询日期：
-								<select name="" id="choiceQueryType">
-									<option value="">选择查询日期</option>
-									<option value="7">7天前</option>
-									<option value="30">30天前</option>
-									<option value="auto">自选</option>
-								</select>
-								<input id="dateIpt1" class="dateIpt" type="text" placeholder="查询起始日期"/>--
-								<input id="dateIpt2" class="dateIpt" type="text" placeholder="查询终止日期"/>
-								<span class="iBtn queryBtn">查询</span>
-								<p>（注：默认选项都是全部，时间选项为昨天）</p>
+					<div class="realtime">
+						<div class="mode modeFour">
+							<div class="tit">
+								<h4>实时监控</h4>
+								<span>当日00:00起计算</span>	
+							</div>
+							<div class="realTimeZone">
+								<strong id="realtimeNum" class="realtimeNum"></strong>
+								<p>近7日展示数</p>
 							</div>
 						</div>
-						<div id="dataTalk" class="mode dataTalk">
+						
+						<div id="realtimeZone" class="mode modeFive">
 							
 						</div>
+
+						
 						<div class="mode mode3">
-							<h4>广告列表</h4>
+							<div class="tit">
+								<h4>广告列表</h4>
+								<span>当日00:00起计算</span>	
+							</div>
 							<table class="table table-bordered table-hover">
 								<tr>
 									<th width="50%">广告名称</th>
@@ -130,11 +93,14 @@
 			
 		</div>
 		<!--js-->
-		<script src="lib/js/jquery-1.8.3.min.js"></script>
+		<!--<script src="lib/js/jquery-1.8.3.min.js"></script>-->
+		<script src="http://www.helloweba.com/demo/js/jquery-1.7.2.min.js"></script>
 		<script src="lib/js/jquery-ui-1.11.4.min.js"></script>
 		
 		<script src="lib/js/bootstrap.min.js"></script>
 		<script src="lib/js/echarts.common.min.js"></script>
+		<script src="lib/js/animationBackground.js"></script>
 		<script src="js/adtop.js"></script>
 	</body>
 </html>
+

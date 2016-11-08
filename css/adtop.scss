@@ -190,7 +190,7 @@ li{
       height:28px;
       vertical-align: sub;
       background-repeat: no-repeat;
-      background-size:contain;
+      background-size:cover;
       background-position: center center;
       margin-right:10px;
       &.sideIcon1{
@@ -208,8 +208,6 @@ li{
       &.sideIcon5{
         background-image:url(../img/sideIcon5.png);   
       }
-      
-        
     }
 }
 .adtopContent{
@@ -489,3 +487,50 @@ li{
     border:1px solid #eee;
     padding:40px 20px;
 }
+.realtime{
+    .tit{
+        @include clearfix;
+        margin:40px 0 20px;
+        h4{
+            float:left;
+            margin:0;
+            font-size:24px;
+        }
+        span{
+            float:right;
+
+        }    
+    }
+}
+.realTimeZone{
+    background:#26a59a;
+    padding:100px 30px;
+    text-align: center;
+    color:#fff;
+    font-size:20px;
+    strong{
+        display: block;
+        font-size:60px;
+        margin-bottom:30px; 
+        font-weight: normal;  
+    }
+}
+.modeFive{
+    min-height: 340px;
+    padding: 0 30px;
+    margin-bottom: 20px;
+}
+
+ .realtimeNum{
+     i{
+         width:32px;
+         height:68px; 
+         display:inline-block; 
+         background: url(../img/number.png) no-repeat; 
+         background-position:0 0; 
+         margin:0 2px;
+     }
+ }
+
+
+
